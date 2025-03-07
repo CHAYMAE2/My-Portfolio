@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col, Row, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { CgCPlusPlus } from "react-icons/cg";
 import {
   DiJavascript1,
@@ -16,53 +16,53 @@ import {
   SiNextdotjs,
   SiSolidity,
   SiPostgresql,
+  SiHtml5, 
+  SiCss3,
+  SiMysql,
 } from "react-icons/si";
 import { TbBrandGolang } from "react-icons/tb";
+
+function renderTooltip(name) {
+  return <Tooltip>{name}</Tooltip>;
+}
 
 function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
-        <CgCPlusPlus />
+        <OverlayTrigger placement="top" overlay={renderTooltip("Python")}>
+          <span><DiPython size={70} /></span>
+        </OverlayTrigger>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
+        <OverlayTrigger placement="top" overlay={renderTooltip("C++")}>
+          <span><CgCPlusPlus size={70} /></span>
+        </OverlayTrigger>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <TbBrandGolang />
+        <OverlayTrigger placement="top" overlay={renderTooltip("JavaScript")}>
+          <span><DiJavascript1 size={70} /></span>
+        </OverlayTrigger>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiNodejs />
+        <OverlayTrigger placement="top" overlay={renderTooltip("Git")}>
+          <span><DiGit size={70} /></span>
+        </OverlayTrigger>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
+        <OverlayTrigger placement="top" overlay={renderTooltip("HTML")}>
+          <span><SiHtml5 size={70} /></span>
+        </OverlayTrigger>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiSolidity />
+        <OverlayTrigger placement="top" overlay={renderTooltip("CSS")}>
+          <span><SiCss3 size={70} /></span>
+        </OverlayTrigger>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiMongodb />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiNextdotjs />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiFirebase />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiRedis />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiPostgresql />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJava />
+        <OverlayTrigger placement="top" overlay={renderTooltip("MySQL")}>
+          <span><SiMysql size={70} /></span>
+        </OverlayTrigger>
       </Col>
     </Row>
   );
