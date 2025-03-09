@@ -5,7 +5,6 @@ import Particle from "../Particle";
 import cnn from "../../Assets/Projects/cnn.png";
 import cars from "../../Assets/Projects/cars.png";
 import qgis from "../../Assets/Projects/qgis_project.png";
-import liris from "../../Assets/Projects/liris_result.png";
 import climate from "../../Assets/Projects/climate.png";
 import DL from "../../Assets/Projects/DL.png";
 import jurisinnov from "../../Assets/Projects/jurisinnov.png";

@@ -2,10 +2,6 @@ import React from "react";
 import { Col, Row, OverlayTrigger, Tooltip } from "react-bootstrap";
 import {
   SiVisualstudiocode,
-  SiPostman,
-  SiSlack,
-  SiVercel,
-  SiMacos,
 } from "react-icons/si";
 import PowerBIIcon from "../../Assets/icons/powerbi.svg";
 import TableauIcon from "../../Assets/icons/tableau.svg";
