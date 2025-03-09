@@ -2,12 +2,14 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/liri.png";
+import cnn from "../../Assets/Projects/cnn.png";
+import cars from "../../Assets/Projects/cars.png";
+import qgis from "../../Assets/Projects/qgis_project.png";
 import liris from "../../Assets/Projects/liris_result.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import climate from "../../Assets/Projects/climate.png";
+import DL from "../../Assets/Projects/DL.png";
+import jurisinnov from "../../Assets/Projects/jurisinnov.png";
+import demoVideoLiris from "../../Assets/Projects/2_cercles_liris.mp4";
 
 function Projects() {
   return (
@@ -15,78 +17,90 @@ function Projects() {
       <Particle />
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
+        <strong className="purple">Old and Recent Works </strong>
         </h1>
         <p style={{ color: "white" }}>
-        Here are some projects I've worked on, both individually and in a team.
+        Here are some projects I've worked on, individually or in a team.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
+
+        <Col md={6} className="project-card">
             <ProjectCard
-              imgPath={liris}
+              imgPath={DL}
               isBlog={false}
-              title="Research Project at Laboratory of Computer Science, Image, and Information Systems - LIRIS at Ecole Centrale de Lyon"
-              description={`Development of a hydrophilic surface that can preserve the shape of water droplets:\n
-              Implementation of an object detection system to identify water droplets and the surface on which they are deposited.\n
-              Development of image processing algorithms and Machine Learning techniques to calculate the contact angle between water droplets and the surface.`}
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="Deep Learning and Neural Networks - Ecole Centrale de Lyon"
+              description="This group project explores Deep Learning (DL), covering its fundamentals, architectures, training techniques, and applications. It highlights DL's impact in fields like healthcare, finance, automotive, and robotics, showcasing its potential to solve real-world problems."
+              ghLink={null}
+              pdfLinks={[
+                { name: "Project Report", link: "/report_DL_ecl.pdf" },
+              ]}
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col md={6} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath={qgis}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="Industrial risks in Bas Rhin - Geographical Information Systems - Ecole Centrale de Lyon"
+              description="The aim of this group project is to leverage geographic information systems to examine industrial risks within the Bas-Rhin region and to discover solutions to our central question: What strategies are implemented to effectively minimise the risks induced by the presence of Seveso-classified sites in the region Bas-Rhin?. All the maps were made by us using QGIS"
+              pdfLinks={[
+                { name: "Project Report", link: "/report_ecl.pdf" },
+                { name: "Project Presentation", link: "/Industrial risks in Bas Rhin.pptx" },
+              ]}            
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col md={6} className="project-card">
             <ProjectCard
-              imgPath={editor}
+              imgPath={jurisinnov}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="Asynchronous Architecture for Medical Records Processing and Metadata Retrieval"
+              description="This technology was developed by the SANAMED startup to streamline medical record management using asynchronous architecture, optimizing processing efficiency and metadata retrieval. We transferred this technology to the legal field to process jurisprudence data in Morocco. By applying the same principles, we’ve enhanced document management, streamlined workflows, and improved access to critical information, helping legal professionals with research, case preparation, and decision-making."
+              ghLink={null}
+              pdfLinks={[
+                { name: "Executive Summary", link: "/Executive Summary GRP4.pdf" },
+                { name: "Cahier des Charges", link: "/CAHIER DE CHARGE GRP4.pdf" },
+                { name: "Poster", link: "/POSTER GRP4.pdf" }
+              ]}
+            />
+          </Col>
+          
+
+          <Col md={6} className="project-card">
+            <ProjectCard
+              imgPath={climate}
+              isBlog={false}
+              title="Impact of Climate Risks in Morocco - Ecole Centrale Casablanca"
+              description="This projet involves studying and assessing the various effects of climate change on the environment, economy, and society in Morocco, which includes analyzing the impact of rising temperatures and changes in precipitation patterns on sectors such as agriculture, water resources, infrastructure, and public health. It seeks to contribute to the understanding of climate change impacts in Morocco and to inform decision-making processes for sustainable development and climate resilience."
+              pdfLinks={[
+                { name: "Project Report", link: "/projet_scientifique.pdf" },
+              ]}
             />
           </Col>
 
-          <Col md={4} className="project-card">
+
+          <Col md={6} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={cars}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              title="Adaptive Traffic Light System - SmartCross"
+              description="This project tackles traffic congestion in Dakar by developing an adaptive traffic light system that dynamically adjusts signal durations based on real-time vehicle detection. Using Raspberry Pi, cameras, and Python, the system leverages YOLOv8 for accurate car detection via computer vision. Additionally, ultrasonic sensors enhance reliability in low-visibility conditions, ensuring continuous traffic monitoring and optimization."
+              pdfLinks={[
+                { name: "Project Report", link: "/Rap_PLBD_Groupe12_Smartcross.pdf" },
+                { name: "Poster", link: "/Poster_groupe12_juin2023.pdf" }
+              ]}
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col md={6} className="project-card">
             <ProjectCard
-              imgPath={suicide}
+              imgPath={cnn}
               isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
+              title="Breast Cancer Classification using CNN"
+              description="This project involves preprocessing and augmenting image data, designing a CNN to classify images as benign or malignant, and evaluating performance using accuracy, precision, recall, and F1 score."
+              pdfLinks={[
+                { name: "Project Presentation", link: "/rapport_tipe.pdf" },
+              ]} 
             />
           </Col>
         </Row>

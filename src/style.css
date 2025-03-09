@@ -473,6 +473,60 @@ button:focus {
   box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
 }
 
+\\
+.project-card-view {
+  box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
+  color: white !important;
+  background-color: transparent !important;
+  opacity: 0.9 !important;
+  transition: all 0.5s ease 0s !important;
+  height: 100% !important;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+  padding: 20px;
+}
+
+.project-img {
+  width: 100%;
+  height: 350px; /* Set a consistent height */
+  object-fit: cover;
+}
+
+.project-card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.project-card-description {
+  text-align: justify;
+  white-space: pre-line;
+  margin: 15px 0;
+  font-size: 1rem;
+}
+
+.project-card-btn {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.project-section .row {
+  display: flex;
+  justify-content: center;
+}
+
+\\
+
 .blog-card {
   padding-top: 50px !important;
   padding-bottom: 50px !important;
