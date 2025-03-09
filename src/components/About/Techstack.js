@@ -3,24 +3,14 @@ import { Col, Row, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { CgCPlusPlus } from "react-icons/cg";
 import {
   DiJavascript1,
-  DiReact,
-  DiNodejs,
-  DiMongodb,
   DiPython,
   DiGit,
-  DiJava,
 } from "react-icons/di";
 import {
-  SiRedis,
-  SiFirebase,
-  SiNextdotjs,
-  SiSolidity,
-  SiPostgresql,
   SiHtml5, 
   SiCss3,
   SiMysql,
 } from "react-icons/si";
-import { TbBrandGolang } from "react-icons/tb";
 
 function renderTooltip(name) {
   return <Tooltip>{name}</Tooltip>;

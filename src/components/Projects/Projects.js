@@ -9,7 +9,6 @@ import liris from "../../Assets/Projects/liris_result.png";
 import climate from "../../Assets/Projects/climate.png";
 import DL from "../../Assets/Projects/DL.png";
 import jurisinnov from "../../Assets/Projects/jurisinnov.png";
-import demoVideoLiris from "../../Assets/Projects/2_cercles_liris.mp4";
 
 function Projects() {
   return (
